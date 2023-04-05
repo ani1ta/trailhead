@@ -1,0 +1,46 @@
+<!-- <template>
+    <div>
+        <div>Name: {name}</div>
+        <div>Description: {description}</div>
+        <div>Category: {category}</div>
+        <div>Material: {material}</div>
+        <div>Price: {price}</div>
+        <div><img src={pictureUrl}/></div>
+    </div>
+    
+</template> -->
+
+
+<!-- Paste the following into app.html. The content in the “display” div 
+tag doesn't appear until the value of ready is true in the HTML file -->
+
+<!-- <template>
+    <div id="waiting" if:false={ready}> Loading...</div>
+    <div id="display" if:true={ready}>
+        <div>Name: {name}</div>
+        <div>Description: {description}</div>
+        <div>Category: {category}</div>
+        <div>Material: {material}</div>
+        <div>Price: {price}</div>
+        <div><img src={pictureUrl}/></div>
+    </div>
+    
+</template> -->
+
+
+<!-- Let's make the details of the bike stand out. In the app.html file, replace the div tags for material and category in the
+ last example with a lightning-badge component. Here's the HTML. -->
+
+
+<template>
+    <div id="waiting" if:false={ready}> Loading...</div>
+    <div id="display" if:true={ready}>
+        <div>Name: {name}</div>
+        <div>Description: {description}</div>
+        <lightning-badge label={material}></lightning-badge>
+        <lightning-badge label={category}></lightning-badge>
+        <div>Price: {price}</div>
+        <div><img src={pictureUrl}/></div>
+    </div>
+    
+</template>
